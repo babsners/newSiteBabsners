@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Windows;
+    src: url(/fonts/windows.ttf)
+}
+
+  @font-face {
+    font-family: MS;
+    src: url(/fonts/micross.ttf)
+}

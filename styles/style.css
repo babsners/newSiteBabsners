@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    border-top: 3px solid #c3c3c3;
+    border-left: 3px solid #c3c3c3;
+    border-right: 3px solid #303030;
+    border-bottom: 3px solid #303030;
+}
+
+.headerFront{
+    width: 100%;
+    height: 50px;
+    background-color: #000082;
+    /* background-image: linear-gradient(to right, #0808ca, #000082); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+}
+
+.headerLogo h1{
+    font-family: Windows;
+    color:#ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headerLogo h1:hover{
+    color:#000000;
+}
+
+.headerNav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.headerLinks{
+    font-family: Windows;
+    font-weight: bold;
+    color:#ffffff;
+    outline:none;
+    border: 1px solid rgb(255, 255, 255, 0);
+}
+
+.headerLinks:hover{
+    outline:none;
+    background-color: #c3c3c3;
+    color: #000;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    transition: 0.3s all;
+}
+
+
+/* main */
+
+main{
+    width: 100%;
+    font-family: Windows;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/bg7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.mainCardLeft{
+    background-color: #c3c3c3;
+    width: 250px;
+    height: 100px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    box-shadow: 1px 1px 3px #303030;
+    position: relative;
+}
+
+.mainCardLeft .mainCardNone{
+    background-color: #000082;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.mainCardLeft .mainCardNone .x{
+    width: 15px;
+    height: 15px;
+    background-color: #c3c3c3;
+    border: 1px solid #000;
+    margin: 3px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.mainCardLeft p{
+    font-size: 14px;
+    color:#ffffff;
+    padding-left: 3px;
+}
+
+.mainLeftComputer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mainLeftComputer img{
+    margin-top: 5px;
+    margin-left: -50px;
+    width: 30px;
+}
+
+.mainLeftComputer p{
+    margin-top: 5px;
+    color:#000;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.mainLeftbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    background: none;
+}
+
+
+.mainLeftOK{
+    margin-top: 5px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #c3c3c3;
+    padding: 3px 12px 3px 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.mainLeftOK-btn:hover,
+.mainLeftOK-btn:focus {
+  outline: 0;
+}
+
+.mainLeftOK:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
+
+.mainCardCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainAvatar{
+    width: 556px;
+    /* -webkit-filter: drop-shadow(5px 5px 10px rgba(0 0 0 / 40%)); 
+    filter: drop-shadow(5px 5px 10px rgba(0 0 0 / 40%)); */
+}
+
+
+.mainCardRight{
+    background-color: #c3c3c3;
+    width: 200px;
+    height: 200px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    box-shadow: 1px 1px 3px #303030;
+    position: relative;
+}
+
+.mainCardRight .mainCardNone{
+    background-color: #000082;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.mainCardRight .mainCardNone .x{
+    width: 15px;
+    height: 15px;
+    background-color: #c3c3c3;
+    border: 1px solid #000;
+    margin: 3px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.mainCardRight p{
+    font-size: 14px;
+    color:#ffffff;
+    padding-left: 3px;
+}
+
+.mainRightContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 40%;
+    height: 100%;
+}
+
+.bookSkills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.bookSkills span{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 30px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.bookSkills img{
+    margin-left: -40px;
+    width: 30px;
+}
+
+.checkboxRight{
+    margin-top: 30px;
+}
+
+.checkboxCustom{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+label[for=checkbox1]{
+    cursor: pointer;
+}
+
+.checkboxCustom #checkbox1{
+    appearance: none;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px #535353 inset;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkboxCustom #checkbox1:before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(45deg);
+    opacity: 0;
+    top: 1px;
+}
+
+.checkboxCustom #checkbox1:checked:before{
+    opacity: 1;
+}
+
+.checkboxCustom #checkbox1:focus{
+    box-shadow: 0px 0px 0px 1px #535353 inset;
+}
+
+
+/* footer */
+
+.footerFront{
+    font-family: Windows;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #c3c3c3;
+    border-top: 3px solid #f5f5f5;
+    position: relative;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.startFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+
+.btnStart{
+    font-family: Windows;
+    background-image: url(/images/pixel-babsners4.png);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #c3c3c3;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnStart:hover,
+.btnStart:focus {
+  outline: 0;
+}
+
+.btnStart:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
+
+.startFooter a{
+    display: flex;
+}
+
+.boxFooterContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    margin-left: 5px;
+}
+
+.boxFooterContent a{
+    display: flex;
+}
+
+
+.btnGitHub{
+    font-family: Windows;
+    background-image: url(/images/github-footer.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #c3c3c3;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnGitHub:hover,
+.btnGitHub:focus {
+  outline: 0;
+  border: none;
+  box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
+}
+
+.btnGitHub:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
+
+.btnLinkedIn{
+    font-family: Windows;
+    background-image: url(/images/linkedin-footer.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #c3c3c3;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnLinkedIn:hover,
+.btnLinkedIn:focus {
+  outline: 0;
+  border: none;
+  box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
+}
+
+.btnLinkedIn:active {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #848484;
+  border-top: 1px solid #848484;
+}
+
+.dateBoxContent{
+    width: 170px;
+    height: 39px;
+    box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#525252;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+}
+
