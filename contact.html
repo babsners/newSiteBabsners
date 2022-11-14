@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>babsners</title>
+    <meta name="author" content="babsners">
+    <meta name="description" content="front-end developer">
+    <meta name="keywords" content="html5, javascript, tecnologia, css, frontend, front-end, developer, babsners">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header class="headerFront">
+        <div class="headerLogo">
+            <a href="index.html"><h1>babsners.dev</h1></a>
+        </div>
+        <nav class="headerNav">
+            <ul>
+                <a class="headerLinks" href="aboutme.html"><li>About me</li></a>
+                <a class="headerLinks" href="portfolio.html"><li>Portfolio</li></a>
+                <a class="headerLinks" href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="cardContact">
+            <div class="cardContactNone">
+                <span>Contact me</span>
+            </div>
+            <form action="https://formsubmit.co/babsners@hotmail.com" method="post" class="formContact">
+
+                <div class="fieldContact">
+                    <label class="labelContact">Name</label>
+                    <input type="text" name="name" placeholder="Your name" required="required">
+                </div>
+
+                <div class="fieldContact">
+                    <label class="labelContact">Email</label>
+                    <input type="email" name="email" placeholder="Your email" required="required">
+                </div>
+
+                <div class="fieldContactTextarea">
+                    <label class="textContact">Type your message here</span>
+                    <textarea required="required" maxlength="500"></textarea>
+                </div>
+
+                <div class="buttonContact">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://babsners.github.io/newSiteBabsners/index.html">
+                    <input class="btnContact" type="submit" value="Send message">
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <footer class="footerFront">
+        <div class="footerContent">
+
+            <div class="startFooter">
+                <a href="index.html"><input class="btnStart" type="button" value=""/></a>
+            </div>
+
+            <div class="boxFooterContent">
+                <a href="https://github.com/babsners" target="_blank"><input class="btnGitHub" type="button" value=""/></a>
+            </div>
+
+            <div class="boxFooterContent">
+                <a href="https://www.linkedin.com/in/b%C3%A1rbara-gomes-b0b97965/" target="_blank"><input class="btnLinkedIn" type="button" value=""/></a>
+            </div>
+
+            <div class="dateBoxContent">
+                <span>babsners@hotmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
