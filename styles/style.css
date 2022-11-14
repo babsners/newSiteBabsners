@@ -826,19 +826,6 @@ label[for=checkbox2]{
     transition: 0.3s all;
 }
 
-.logoImg{
-    position: abosolute;
-    -webkit-animation-name: slideLeftReturn;
-    animation: slideLeftReturn;
-    animation-duration: 3s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    width: 80px;
-    margin-top: 10px;
-    z-index: 1;
-    filter:drop-shadow(2px 2px 2px #575757);
-}
-
 
 /* form */
 
