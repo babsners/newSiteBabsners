@@ -1,33 +1,89 @@
 @keyframes slideLeftReturn {
     0% {
-      transform-origin: 0 0;
-      transform: translateX(-950%);
+        transform-origin: 0 0;
+        transform: translateX(-950%);
     }
+
     100% {
-      transform-origin: 0 0;
-      transform: translateX(600%);
+        transform-origin: 0 0;
+        transform: translateX(600%);
     }
 }
 
 @-webkit-keyframes slideLeftReturn {
     0% {
-      transform-origin: 0 0;
-      transform: translateX(-950%);
+        transform-origin: 0 0;
+        transform: translateX(-950%);
     }
+
     100% {
-      transform-origin: 0s 0;
-      transform: translateX(600%);
+        transform-origin: 0s 0;
+        transform: translateX(600%);
+    }
+}
+
+.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1)
+    }
+
+    32% {
+        color: var(--color-1)
+    }
+
+    33% {
+        color: var(--color-2)
+    }
+
+    65% {
+        color: var(--color-2)
+    }
+
+    66% {
+        color: var(--color-3)
+    }
+
+    99% {
+        color: var(--color-3)
+    }
+
+    100% {
+        color: var(--color-1)
     }
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     border-top: 3px solid #c3c3c3;
     border-left: 3px solid #c3c3c3;
@@ -35,76 +91,109 @@ body{
     border-bottom: 3px solid #303030;
 }
 
-.headerFront{
-    width: 100%;
-    height: 50px;
+/* header */
+
+header{
+    font-family: Windows;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: #000082;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px 10px 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 0px 30px 0px 30px;
+    justify-content: space-between;
+    z-index: 1000;
 }
-.headerLogo a{
+
+header .logo{
+    font-size: 20px;
+    color: #fff;
     text-decoration: none;
 }
 
-.headerLogo h1{
-    font-family: Windows;
-    color:#ffffff;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.headerLogo h1:hover{
+header .logo:hover{
     color:#000;
 }
 
-.headerNav li{
-    display: inline-block;
-    line-height: 10px;
-}
-
-.headerLinks{
+header .menu ul{
     list-style: none;
-    text-decoration: none;
-    font-family: Windows;
-    font-weight: bold;
-    color:#ffffff;
-    outline:none;
-    border: 2px solid rgb(255, 255, 255, 0);
-    padding: 5px 9px;
 }
 
-.headerLinks:hover{
-    outline:none;
-    background-color: #c3c3c3;
+header .menu ul li{
+    position: relative;
+    float: left;
+    padding-left: 10px;
+}
+
+header .menu ul li a{
+    font-size: 1.1em;
+    padding: 3px 7px;
+    border: 2px solid rgb(255, 255, 255, 0);
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .menu ul li a:hover{
     color: #000;
+    background-color: #c3c3c3;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
     border-right: 2px solid #525252;
     border-bottom: 2px solid #525252;
-    transition: 0.3s all;
+}
+
+
+#btn-menu{
+    display: none;    
+}
+
+header label{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
 }
 
 
 /* main */
 
-main{
+.mainFront {
     width: 100%;
+    height: 100vh;
     font-family: Windows;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-image: url(/images/bg7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    position: relative;
 }
 
-.mainCardLeft{
+.title {
+    font-family: Windows;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    text-transform: uppercase;
+    font-size: 5em;
+    text-align: center;
+    line-height: 1;
+}
+
+.title-word {
+    animation: color-animation 3s linear infinite;
+    text-shadow: 2px 4px 5px rgb(73, 73, 73, 0.5);
+}
+
+.mainCardLeft {
     background-color: #c3c3c3;
     width: 250px;
     height: 100px;
@@ -114,10 +203,11 @@ main{
     border-right: 2px solid #525252;
     border-bottom: 2px solid #525252;
     box-shadow: 1px 1px 5px #bebebe;
-    position: relative;
+    position: absolute;
+    left: 200px;
 }
 
-.mainCardLeft .mainCardNone{
+.mainCardLeft .mainCardNone {
     background-color: #000082;
     width: 100%;
     height: 20px;
@@ -128,7 +218,7 @@ main{
     cursor: pointer;
 }
 
-.mainCardLeft .mainCardNone .x img{
+.mainCardLeft .mainCardNone .x img {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -138,20 +228,20 @@ main{
 
 .mainCardLeft .mainCardNone .x img:hover,
 .mainCardLeft .mainCardNone .x img:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .mainCardLeft .mainCardNone .x img:active {
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-.mainCardLeft p{
+.mainCardLeft p {
     font-size: 14px;
-    color:#ffffff;
+    color: #ffffff;
     padding-left: 3px;
 }
 
-.mainLeftComputer{
+.mainLeftComputer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -159,21 +249,21 @@ main{
     gap: 30px;
 }
 
-.mainLeftComputer img{
+.mainLeftComputer img {
     margin-top: 5px;
     margin-left: -50px;
     width: 30px;
 }
 
-.mainLeftComputer p{
+.mainLeftComputer p {
     margin-top: 5px;
-    color:#000;
+    color: #000;
     text-transform: uppercase;
     display: flex;
     align-items: center;
 }
 
-.mainLeftbtn{
+.mainLeftbtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +273,7 @@ main{
 }
 
 
-.mainLeftOK{
+.mainLeftOK {
     margin-top: 5px;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
@@ -197,38 +287,39 @@ main{
 
 .mainLeftOK-btn:hover,
 .mainLeftOK-btn:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .mainLeftOK:active {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #848484;
-  border-top: 1px solid #848484;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #848484;
+    border-top: 1px solid #848484;
 }
 
-.mainCardCenter{
+.mainCardCenter {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.mainAvatar {
+    width: 600px;
+}
+
+.contentRight {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.mainAvatar{
-    width: 556px;
-}
-
-.contentRight{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    position: absolute;
+    right: 200px;
 }
 
 
-.mainCardRight{
+.mainCardRight {
     background-color: #c3c3c3;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 170px;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
     border-right: 2px solid #525252;
@@ -238,7 +329,7 @@ main{
     z-index: 1;
 }
 
-.mainCardRight .mainCardNone{
+.mainCardRight .mainCardNone {
     background-color: #000082;
     width: 100%;
     height: 20px;
@@ -249,7 +340,7 @@ main{
     cursor: pointer;
 }
 
-.mainCardRight .mainCardNone .x img{
+.mainCardRight .mainCardNone .x img {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -259,29 +350,29 @@ main{
 
 .mainCardRight .mainCardNone .x img:hover,
 .mainCardRight .mainCardNone .x img:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .mainCardRight .mainCardNone .x img:active {
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-.mainCardRight p{
-    font-size: 14px;
-    color:#ffffff;
+.mainCardRight p {
+    font-size: 0.9em;
+    color: #ffffff;
     padding-left: 3px;
 }
 
-.mainRightContent{
+.mainRightContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: auto;
-    width: 40%;
     height: 100%;
 }
 
-.bookSkills{
+.bookSkills {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,34 +380,35 @@ main{
     margin-top: -30px;
 }
 
-.bookSkills span{
+.bookSkills span {
     text-align: center;
     text-transform: uppercase;
     line-height: 30px;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 15px;
+    font-size: 1em;
 }
 
-.bookSkills img{
-    margin-left: -40px;
+.bookSkills img {
+    margin-left: -20px;
     width: 30px;
 }
 
-.checkboxRight{
-    margin-top: 30px;
+.checkboxRight {
+    margin-top: 10px;
 }
 
-.checkboxCustom{
+.checkboxCustom {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-label[for=checkbox1]{
+label[for=checkbox1] {
     cursor: pointer;
 }
 
-.checkboxCustom #checkbox1{
+.checkboxCustom #checkbox1 {
     appearance: none;
     background-color: #ffffff;
     box-shadow: 0px 0px 0px 1px #535353 inset;
@@ -330,7 +422,7 @@ label[for=checkbox1]{
     justify-content: center;
 }
 
-.checkboxCustom #checkbox1:before{
+.checkboxCustom #checkbox1:before {
     content: "";
     position: absolute;
     width: 4px;
@@ -342,29 +434,29 @@ label[for=checkbox1]{
     top: 1px;
 }
 
-.checkboxCustom #checkbox1:checked:before{
+.checkboxCustom #checkbox1:checked:before {
     opacity: 1;
 }
 
-.checkboxCustom #checkbox1:focus{
+.checkboxCustom #checkbox1:focus {
     box-shadow: 0px 0px 0px 1px #535353 inset;
 }
 
 /* card#2 */
 
-.bck-position{
+.bck-position {
     position: absolute;
     right: -80px;
     bottom: -40px;
 }
 
-.bck-position:hover{
+.bck-position:hover {
     z-index: 1;
 }
 
-.mainCardRight-backend{
+.mainCardRight-backend {
     background-color: #c3c3c3;
-    width: 200px;
+    width: 180px;
     height: 170px;
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
@@ -374,7 +466,7 @@ label[for=checkbox1]{
     margin-top: 100px;
 }
 
-.mainCardRight-backend .mainCardNone-backend{
+.mainCardRight-backend .mainCardNone-backend {
     background-color: #000082;
     width: 100%;
     height: 20px;
@@ -385,7 +477,7 @@ label[for=checkbox1]{
     cursor: pointer;
 }
 
-.mainCardRight-backend .mainCardNone-backend .x img{
+.mainCardRight-backend .mainCardNone-backend .x img {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -395,7 +487,7 @@ label[for=checkbox1]{
 
 .mainCardRight-backend .mainCardNone-backend .x img:hover,
 .mainCardRight-backend .mainCardNone-backend .x img:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .mainCardRight-backend .mainCardNone-backend .x img:active {
@@ -403,13 +495,13 @@ label[for=checkbox1]{
 }
 
 
-.mainCardRight-backend p{
-    font-size: 14px;
-    color:#ffffff;
+.mainCardRight-backend p {
+    font-size: 0.9em;
+    color: #ffffff;
     padding-left: 3px;
 }
 
-.mainRightContent-backend{
+.mainRightContent-backend {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -418,7 +510,7 @@ label[for=checkbox1]{
     height: 40%;
 }
 
-.swordSkills-backend{
+.swordSkills-backend {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,34 +518,35 @@ label[for=checkbox1]{
     margin-top: 80px;
 }
 
-.swordSkills-backend span{
+.swordSkills-backend span {
     text-align: center;
     text-transform: uppercase;
     line-height: 30px;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 15px;
+    font-size: 1em;
 }
 
-.swordSkills-backend img{
-    margin-left: -40px;
+.swordSkills-backend img {
+    margin-left: -20px;
     width: 30px;
 }
 
-.checkboxRight-backend{
+.checkboxRight-backend {
     margin-top: 10px;
 }
 
-.checkboxCustom-backend{
+.checkboxCustom-backend {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-label[for=checkbox2]{
+label[for=checkbox2] {
     cursor: pointer;
 }
 
-.checkboxCustom-backend #checkbox2{
+.checkboxCustom-backend #checkbox2 {
     appearance: none;
     background-color: #ffffff;
     box-shadow: 0px 0px 0px 1px #535353 inset;
@@ -467,7 +560,7 @@ label[for=checkbox2]{
     justify-content: center;
 }
 
-.checkboxCustom-backend #checkbox2:before{
+.checkboxCustom-backend #checkbox2:before {
     content: "";
     position: absolute;
     width: 4px;
@@ -479,18 +572,18 @@ label[for=checkbox2]{
     top: 1px;
 }
 
-.checkboxCustom-backend #checkbox2:checked:before{
+.checkboxCustom-backend #checkbox2:checked:before {
     opacity: 1;
 }
 
-.checkboxCustom-backend #checkbox2:focus{
+.checkboxCustom-backend #checkbox2:focus {
     box-shadow: 0px 0px 0px 1px #535353 inset;
 }
 
 
 /* footer */
 
-.footerFront{
+.footerFront {
     font-family: Windows;
     width: 100%;
     height: 55px;
@@ -502,13 +595,13 @@ label[for=checkbox2]{
     position: relative;
 }
 
-.footerContent{
+.footerContent {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.startFooter{
+.startFooter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,7 +611,7 @@ label[for=checkbox2]{
 }
 
 
-.btnStart{
+.btnStart {
     font-family: Windows;
     background-image: url(/images/button-winStart-avatar1.png);
     background-size: 90px;
@@ -542,17 +635,17 @@ label[for=checkbox2]{
 }
 
 .btnStart:active {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #848484;
-  border-top: 1px solid #848484;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #848484;
+    border-top: 1px solid #848484;
 }
 
-.startFooter a{
+.startFooter a {
     display: flex;
 }
 
-.boxFooterContent{
+.boxFooterContent {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -560,12 +653,12 @@ label[for=checkbox2]{
     margin-left: 5px;
 }
 
-.boxFooterContent a{
+.boxFooterContent a {
     display: flex;
 }
 
 
-.btnGitHub{
+.btnGitHub {
     font-family: Windows;
     background-image: url(/images/github-footer.png);
     background-size: 70px;
@@ -583,19 +676,19 @@ label[for=checkbox2]{
 
 .btnGitHub:hover,
 .btnGitHub:focus {
-  outline: 0;
-  border: none;
-  box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
+    outline: 0;
+    border: none;
+    box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
 }
 
 .btnGitHub:active {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #848484;
-  border-top: 1px solid #848484;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #848484;
+    border-top: 1px solid #848484;
 }
 
-.btnLinkedIn{
+.btnLinkedIn {
     font-family: Windows;
     background-image: url(/images/linkedin-footer.png);
     background-size: 70px;
@@ -613,26 +706,26 @@ label[for=checkbox2]{
 
 .btnLinkedIn:hover,
 .btnLinkedIn:focus {
-  outline: 0;
-  border: none;
-  box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
+    outline: 0;
+    border: none;
+    box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
 }
 
 .btnLinkedIn:active {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #848484;
-  border-top: 1px solid #848484;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #848484;
+    border-top: 1px solid #848484;
 }
 
-.dateBoxContent{
+.dateBoxContent {
     width: 170px;
     height: 39px;
     box-shadow: 0.5px 0.5px 0px 1px #525252 inset;
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#525252;
+    color: #525252;
     position: absolute;
     right: 0;
     margin-right: 5px;
@@ -641,9 +734,9 @@ label[for=checkbox2]{
 
 /* portfolio */
 
-.mainPortfolio{
+.mainPortfolio {
     width: 100%;
-    height: 556px;
+    height: 100vh;
     font-family: Windows;
     margin: 0 auto;
     display: flex;
@@ -656,7 +749,7 @@ label[for=checkbox2]{
     background-position: bottom;
 }
 
-.folderContent{
+.folderContent {
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -664,7 +757,7 @@ label[for=checkbox2]{
     align-items: center;
 }
 
-.folderContent a{
+.folderContent a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -672,15 +765,15 @@ label[for=checkbox2]{
     text-decoration: none;
 }
 
-.folderContent img{
+.folderContent img {
     width: 150px;
 }
 
-.folderContent span{
+.folderContent span {
     color: #000000;
 }
 
-.folderContent span:hover{
+.folderContent span:hover {
     color: #820036;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 1);
 }
@@ -688,9 +781,9 @@ label[for=checkbox2]{
 
 /* about */
 
-.aboutMe{
+.aboutMe {
     width: 100%;
-    height: 556px;
+    height: 100vh;
     font-family: Windows;
     margin: 0 auto;
     display: flex;
@@ -707,7 +800,7 @@ label[for=checkbox2]{
 
 
 
-.cardAbout{
+.cardAbout {
     width: 600px;
     height: 300px;
     background-color: #c3c3c3;
@@ -719,7 +812,7 @@ label[for=checkbox2]{
 }
 
 
-.cardAboutNone{
+.cardAboutNone {
     background-color: #000082;
     width: 100%;
     height: 25px;
@@ -729,7 +822,7 @@ label[for=checkbox2]{
     position: relative;
 }
 
-.notepadImg{
+.notepadImg {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -738,18 +831,18 @@ label[for=checkbox2]{
     top: 2px;
 }
 
-.notepadImg img{
+.notepadImg img {
     width: 19px;
 }
 
-.notepadImg span{
+.notepadImg span {
     margin-left: 3px;
     font-size: 15px;
     font-weight: bold;
     color: #fff;
 }
 
-.winImg{
+.winImg {
     display: inline-block;
     position: absolute;
     right: 3px;
@@ -757,20 +850,20 @@ label[for=checkbox2]{
     cursor: pointer;
 }
 
-.winImg img{
+.winImg img {
     width: 18px;
 }
 
 .winImg img:hover,
 .winImg img:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .winImg img:active {
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-.textAreaAbout{
+.textAreaAbout {
     margin: 0 auto;
     width: 98%;
     height: 230px;
@@ -779,7 +872,7 @@ label[for=checkbox2]{
     box-sizing: border-box;
 }
 
-.lineAbout{
+.lineAbout {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -787,7 +880,7 @@ label[for=checkbox2]{
     align-items: center;
 }
 
-.lineAbout span{
+.lineAbout span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -796,7 +889,7 @@ label[for=checkbox2]{
     width: 565px;
 }
 
-.filesAbout{
+.filesAbout {
     height: 24px;
     display: flex;
     flex-direction: row;
@@ -805,7 +898,7 @@ label[for=checkbox2]{
     margin-left: 2px;
 }
 
-.filesAbout span{
+.filesAbout span {
     font-size: 14px;
     outline: none;
     border: 1px solid rgb(255, 255, 255, 0);
@@ -814,9 +907,9 @@ label[for=checkbox2]{
     cursor: pointer;
 }
 
-.filesAbout span:hover{
+.filesAbout span:hover {
     padding-left: 5px;
-    outline:none;
+    outline: none;
     background-color: #c3c3c3;
     color: #000;
     border-top: 1px solid #ffffff;
@@ -829,10 +922,10 @@ label[for=checkbox2]{
 
 /* form */
 
-.contact{
+.contact {
     margin: 0 auto;
     width: 100%;
-    height: 556px;
+    height: 100vh;
     font-family: Windows;
     display: flex;
     flex-direction: column;
@@ -844,7 +937,7 @@ label[for=checkbox2]{
     background-position: bottom;
 }
 
-.cardContact{
+.cardContact {
     margin: 0 auto;
     width: 400px;
     height: 470px;
@@ -861,7 +954,7 @@ label[for=checkbox2]{
     position: relative;
 }
 
-.cardContactNone{
+.cardContactNone {
     background-color: #000082;
     width: 99%;
     height: 25px;
@@ -871,14 +964,14 @@ label[for=checkbox2]{
     position: absolute;
 }
 
-.cardContactNone span{
+.cardContactNone span {
     display: flex;
     align-items: center;
     font-size: 15px;
     color: #fff;
 }
 
-.formContact{
+.formContact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -886,7 +979,7 @@ label[for=checkbox2]{
     margin-top: 60px;
 }
 
-.fieldContact{
+.fieldContact {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -894,11 +987,11 @@ label[for=checkbox2]{
     margin-bottom: 30px;
 }
 
-.fieldContact label{
+.fieldContact label {
     margin-left: -5px;
 }
 
-.fieldContact input[type=text]{
+.fieldContact input[type=text] {
     font-family: Windows;
     font-size: 14px;
     margin-top: 5px;
@@ -909,7 +1002,7 @@ label[for=checkbox2]{
     outline: none;
 }
 
-.fieldContact input[type=email]{
+.fieldContact input[type=email] {
     font-family: Windows;
     font-size: 14px;
     margin-top: 5px;
@@ -920,7 +1013,7 @@ label[for=checkbox2]{
     outline: none;
 }
 
-.fieldContactTextarea textarea{
+.fieldContactTextarea textarea {
     font-family: Windows;
     font-size: 14px;
     margin-top: 5px;
@@ -937,11 +1030,11 @@ label[for=checkbox2]{
     resize: none;
 }
 
-.fieldContactTextarea label{
+.fieldContactTextarea label {
     margin-left: -5px;
 }
 
-.buttonContact{
+.buttonContact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -949,7 +1042,7 @@ label[for=checkbox2]{
 }
 
 
-.btnContact{
+.btnContact {
     font-family: Windows;
     font-size: 15px;
     width: 370px;
@@ -965,12 +1058,12 @@ label[for=checkbox2]{
 
 .btnContact:hover,
 .btnContact:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .btnContact:active {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #848484;
-  border-top: 1px solid #848484;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #848484;
+    border-top: 1px solid #848484;
 }

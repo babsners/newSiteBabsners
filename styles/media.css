@@ -1,0 +1,599 @@
+@media screen and (min-width: 400px) and (max-width:700px) {
+
+    header label{
+        display: flex;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+
+    header .menu{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(0, 0, 130, 0.8);
+        padding: 10px;
+        display: flex;
+    }
+
+    header .menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn-menu ~ .menu{
+        display: none;
+    }
+
+    #btn-menu:checked ~ .menu{
+        display: flex;
+    }
+
+
+    /* main */
+
+    .mainFront {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-family: Windows;
+        display: flex;
+        position: absolute;
+        top: 10%;
+        text-transform: uppercase;
+        font-size: 4em;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .title-word {
+        animation: color-animation 3s linear infinite;
+        text-shadow: 2px 4px 5px rgb(73, 73, 73, 0.5);
+    }
+
+    .mainCardLeft {
+        display: none;
+    }
+
+    .mainAvatar {
+        display: flex;
+        width: 500px;
+        position: absolute;
+        bottom: 1px;
+        left: -350px;
+    }
+
+    /* cards main */
+
+    .mainCardRight {
+        position: absolute;
+        width: 170px;
+        height: 180px;
+        left: 8px;
+        top: -50px;
+    }
+
+    .mainRightContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        height: 100%;
+    }
+
+    .bookSkills span {
+        margin-left: 15px;
+        font-size: 1em;
+    }
+
+    .bookSkills img {
+        margin-left: -20px;
+        width: 25px;
+    }
+
+    .checkboxRight {
+        margin-top: 10px;
+    }
+
+    .checkboxCustom {
+        font-size: 1em;
+    }
+
+    .mainCardRight p {
+        font-size: 0.9em;
+        color: #ffffff;
+        padding-left: 3px;
+    }
+
+    .checkboxCustom #checkbox1 {
+        width: 13px;
+        height: 13px;
+    }
+
+    .checkboxCustom #checkbox1:before {
+        width: 4px;
+        height: 6px;
+    }
+
+    /* left */
+
+    .mainCardRight-backend {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 170px;
+        height: 180px;
+        right: 10px;
+        top: -320px;
+    }
+
+    .mainRightContent-backend {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mainRightContent-backend {
+        margin-top: 1px;
+    }
+
+    .swordSkills-backend span {
+        margin-left: 15px;
+        font-size: 1em;
+    }
+
+    .swordSkills-backend img {
+        margin-left: -20px;
+        width: 25px;
+    }
+
+    .checkboxRight-backend {
+        margin-top: 10px;
+    }
+
+    .checkboxCustom-backend {
+        font-size: 1em;
+    }
+
+    .mainCardRight-backend p {
+        font-size: 0.9em;
+        color: #ffffff;
+        padding-left: 3px;
+    }
+
+
+    /* about */
+
+    .cardAbout {
+        width: 450px;
+        height: 500px;
+        background-color: #c3c3c3;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        box-sizing: border-box;
+    }
+
+    .notepadImg span {
+        margin-left: 3px;
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .textAreaAbout {
+        margin: 0 auto;
+        width: 98%;
+        height: 86%;
+        box-shadow: 2px 2px 2px #000 inset;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .lineAbout span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.3em;
+        margin-top: 6px;
+        width: 95%;
+    }
+
+    .filesAbout span {
+        font-size: 1em;
+        outline: none;
+        border: 1px solid rgb(255, 255, 255, 0);
+        padding-left: 5px;
+        padding-right: 5px;
+        cursor: pointer;
+    }
+
+    /* portfolio */
+
+    .mainPortfolio {
+        flex-direction: column;
+    }
+
+    /* contact */
+
+    .cardContact {
+        width: 390px;
+        height: 470px;
+    }
+}
+
+
+@media screen and (max-width: 399px){
+    body{
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 558px){
+    .btnStart {
+        font-family: Windows;
+        background-image: url(/images/avatar1.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        background-color: #c3c3c3;
+        width: 50px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .btnGitHub {
+        font-family: Windows;
+        background-image: url(/images/github-pixelart.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        background-color: #c3c3c3;
+        width: 50px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .btnLinkedIn {
+        font-family: Windows;
+        background-image: url(/images/linkedin-pixelart.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        background-color: #c3c3c3;
+        width: 50px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+
+    /* about */
+
+    .cardAbout {
+        width: 400px;
+        height: 500px;
+        background-color: #c3c3c3;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        box-sizing: border-box;
+    }
+
+    .notepadImg span {
+        margin-left: 3px;
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .textAreaAbout {
+        margin: 0 auto;
+        width: 98%;
+        height: 86%;
+        box-shadow: 2px 2px 2px #000 inset;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .lineAbout span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.2em;
+        margin-top: 6px;
+        width: 95%;
+    }
+
+    .filesAbout span {
+        font-size: 1em;
+        outline: none;
+        border: 1px solid rgb(255, 255, 255, 0);
+        padding-left: 5px;
+        padding-right: 5px;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width: 559px) and (max-width:1200px){
+    header label{
+        display: flex;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+
+    header .menu{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(0, 0, 130, 0.8);
+        padding: 10px;
+        display: flex;
+    }
+
+    header .menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn-menu ~ .menu{
+        display: none;
+    }
+
+    #btn-menu:checked ~ .menu{
+        display: flex;
+    }
+    
+    .mainFront {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-family: Windows;
+        display: flex;
+        position: absolute;
+        top: 10%;
+        text-transform: uppercase;
+        font-size: 5em;
+        text-align: center;
+        line-height: 1;
+      }
+
+    .title-word {
+        animation: color-animation 3s linear infinite;
+        text-shadow: 2px 4px 5px rgb(73, 73, 73, 0.5);
+    }
+
+    .mainCardLeft {
+        display: none;
+    }
+
+    .mainAvatar {
+        display: flex;
+        width: 550px;
+        position: absolute;
+        bottom: 1px;
+        right: -100px;
+    }
+
+    /* cards main */
+
+    .mainCardRight {
+        position: absolute;
+        width: 200px;
+        height: 210px;
+        left: -55px;
+        top: -30px;
+    }
+
+    .mainRightContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        height: 100%;
+    }
+
+    .bookSkills span {
+        margin-left: 15px;
+        font-size: 1.3em;
+    }
+
+    .bookSkills img {
+        margin-left: -20px;
+        width: 35px;
+    }
+
+    .checkboxRight {
+        margin-top: 10px;
+    }
+
+    .checkboxCustom {
+        font-size: 1.2em;
+    }
+
+    .mainCardRight p {
+        font-size: 1em;
+        color: #ffffff;
+        padding-left: 3px;
+    }
+
+    .checkboxCustom #checkbox1 {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkboxCustom #checkbox1:before {
+        width: 6px;
+        height: 9px;
+    }
+
+    /* left */
+
+    .mainCardRight-backend {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 210px;
+        left: -270px;
+        top: -300px;
+    }
+
+    .mainRightContent-backend{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mainRightContent-backend {
+        margin-top: 1px;
+    }
+
+    .swordSkills-backend span {
+        margin-left: 15px;
+        font-size: 1.3em;
+    }
+
+    .swordSkills-backend img {
+        margin-left: -20px;
+        width: 25px;
+    }
+
+    .checkboxRight-backend {
+        margin-top: 10px;
+    }
+
+    .checkboxCustom-backend {
+        font-size: 1.2em;
+    }
+
+    .checkboxCustom-backend #checkbox2 {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkboxCustom-backend #checkbox2:before {
+        width: 6px;
+        height: 9px;
+    }
+
+    .mainCardRight-backend p {
+        font-size: 1em;
+        color: #ffffff;
+        padding-left: 3px;
+    }
+
+    .cardAbout {
+        width: 650px;
+        height: 500px;
+        background-color: #c3c3c3;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        box-sizing: border-box;
+    }
+
+    .notepadImg span {
+        margin-left: 3px;
+        font-size: 1em;
+        color: #fff;
+    }
+
+
+    /* about */
+
+    .cardAbout {
+        width: 700px;
+        height: 500px;
+        background-color: #c3c3c3;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #525252;
+        border-bottom: 2px solid #525252;
+        box-sizing: border-box;
+    }
+
+    .notepadImg span {
+        margin-left: 3px;
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .textAreaAbout {
+        margin: 0 auto;
+        width: 98%;
+        height: 86%;
+        box-shadow: 2px 2px 2px #000 inset;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .lineAbout span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.3em;
+        margin-top: 6px;
+        width: 98%;
+    }
+
+    .filesAbout span {
+        font-size: 1em;
+        outline: none;
+        border: 1px solid rgb(255, 255, 255, 0);
+        padding-left: 5px;
+        padding-right: 5px;
+        cursor: pointer;
+    }
+
+
+    /* portfolio */
+
+    .mainPortfolio{
+        flex-direction: column;
+    }
+
+}
